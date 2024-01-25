@@ -1,0 +1,127 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1b1b1b;
+    color: #ffffff;
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .left-icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .right-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .icon {
+    padding: 10px;
+    cursor: pointer;
+    color: #ABABAB;
+    font-size: 20px;
+  }
+  
+  .search {
+    position: relative;
+    display: block;
+    align-items: center;
+    background-color: #2a2a2a;
+    width: 175vh;
+    border: 1px solid #1F1F1F;
+    border-radius: 10px;
+    padding: 7.5px;
+    margin: 0 20px;
+    color: white
+  }
+  
+  input {
+    border: none;
+    color: #ffffff;
+    outline: none;
+    background-color: transparent;
+    flex: 1;
+    padding: 5px;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  .icon.refresh {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    margin-bottom: -30px;
+  }
+  
+  .tab {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #ABABAB;
+    text-align: left;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    background-color: #1f1f1f;
+    border: 2px solid #313131;
+    border-radius: 9px 9px 9px 9px;
+    margin-right: 5px;
+    display: inline-block;
+    position: relative;
+  }
+  
+  .tab:hover {
+    border: 2px solid #272727;
+  }
+  
+  .tab-control i {
+    font-size: 20px;
+    color: #ABABAB;
+    height: 25px;
+    background-color: #1F1F1F;
+    padding: 7px;
+    border-radius: 5px;
+  }
+  
+  .tab-control {
+    position: absolute;
+    right: 25px;
+    top: 80px;
+    margin-left: auto;
+    margin-right: -5px;
+    display: inline-block;
+    user-select: none;
+  }
+  
+  #tabContainer {
+    display: inline-block;
+    width: calc(100% - 85px);
+    overflow-x: auto;
+    white-space: nowrap;
+    user-select: none;
+  }
+  
+  #tabContainer::-webkit-scrollbar {
+    display: none;
+  }

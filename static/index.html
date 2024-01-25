@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nitrogen</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code-alt.github.io/op-tab-sys/tab-sys.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="left-icons">
+      <div class="icon"><i class="fas fa-home"></i></div>
+      <div class="icon"><i class="fas fa-arrow-left"></i></div>
+      <div class="icon"><i class="fas fa-arrow-right"></i></div>
+    </div>
+    <div class="search">
+      <form>
+        <input type="text" placeholder="Starting Page" id="adrbar">
+      </form>
+      <div class="icon refresh">
+        <i class="fas fa-sync-alt"></i>
+      </div>
+    </div>
+    <div class="right-icons">
+      <div class="icon"><i class="fas fa-cog"></i></div>
+      <div class="icon"><i class="fas fa-link"></i></div>
+      <div class="icon"><i class="fas fa-popup"></i></div>
+    </div>
+  </header>
+  <main>
+    <div class="tab" id="tabTemplate" style="display: none; background-color: rgb(54, 54, 54);">New Tab</div>
+    <div id="frameTemplate" style="display: none; "></div>
+    <div class="tabs" id="tabContainer">
+      <div class="tab-control">
+        <i class="fa-solid fa-plus" id="addtab"></i>
+        <i class="fa-solid fa-x" id="closetab"></i>
+      </div>
+  </main>
+  <script src="/uv/uv.bundle.js"></script>
+  <script src="/uv/uv.config.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
