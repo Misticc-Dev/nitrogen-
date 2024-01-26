@@ -8,9 +8,8 @@ import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 const __dirname = process.cwd();
 const server = createServer();
 const app = express(server);
-const bareServer = createBareServer("/bare/");
+const bareServer = createBareServer('/bare/');
 
-createBareServer("/bare/");
 
 app.use("/uv/", express.static(uvPath));
 app.use(express.json());
@@ -32,10 +31,11 @@ server.on("request", (req, res) => {
     bareServer.routeRequest(req, res);
     console.log(`success`);
   } else {
-    app(req, res);  
+    app.handle(req, res);  
     console.log(`fail`);
   }
 });
+
 
 server.on("upgrade", (req, socket, head) => {
   if (bareServer.shouldRoute(req)) {
