@@ -10,16 +10,14 @@ const app = express();
 const publicPath = '/static'
 
 // Load our publicPath first and prioritize it over UV.
-app.use(express.static(publicPath));
+app.use(express.static('public'))
 // Load vendor files last.
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
-// Error for everything else
-app.use((req, res) => {
-  res.status(404);
-  res.sendFile(join(publicPath, "404.html"));
-});
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 const server = createServer();
 
