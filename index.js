@@ -15,10 +15,6 @@ app.use(express.static('static'))
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
 const server = createServer();
 
 server.on("request", (req, res) => {

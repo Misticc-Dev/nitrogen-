@@ -1,5 +1,5 @@
-const form = document.getElementById('adrbar');
-const input = document.querySelector('input');
+const form = document.getElementById('uv-form');
+const input = document.getElementById('adrbar');
 const address = document.getElementById("uv-address");
 const searchEngine = document.getElementById("uv-search-engine");
 
@@ -72,10 +72,7 @@ form.addEventListener("submit", async (event) => {
   try {
     await registerSW();
   } catch (err) {
-    error.textContent = "Failed to register service worker.";
-    errorCode.textContent = err.toString();
     throw err;
-    console.log(err)
   }
 
   const url = search(address.value, searchEngine.value);
