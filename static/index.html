@@ -18,8 +18,13 @@
       <div class="icon"><i class="fas fa-arrow-right"></i></div>
     </div>
     <div class="search">
-      <form>
-        <input type="text" placeholder="Starting Page" id="adrbar">
+      <form  id="uv-form">
+        <input
+        id="uv-search-engine"
+        value="https://www.google.com/search?q=%s"
+        type="hidden"
+        />
+        <input type="text" placeholder="Starting Page" id="adrbar uv-address">
       </form>
       <div class="icon refresh">
         <i class="fas fa-sync-alt"></i>
@@ -43,6 +48,7 @@
   <script src="/uv/uv.bundle.js"></script>
   <script src="/uv/uv.config.js"></script>
   <script src="script.js"></script>
+  <script src="search.js" defer></script>
 </body>
 
 </html>

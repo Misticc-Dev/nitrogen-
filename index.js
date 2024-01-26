@@ -1,13 +1,13 @@
 import { createBareServer } from "@tomphttp/bare-server-node";
 import express from "express";
 import { createServer } from "node:http";
-import { publicPath } from "ultraviolet-static";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { join } from "node:path";
 import { hostname } from "node:os";
 
 const bare = createBareServer("/bare/");
 const app = express();
+const publicPath = '/static'
 
 // Load our publicPath first and prioritize it over UV.
 app.use(express.static(publicPath));
@@ -45,9 +45,6 @@ if (isNaN(port)) port = 8080;
 
 server.on("listening", () => {
   const address = server.address();
-
-  // by default we are listening on 0.0.0.0 (every interface)
-  // we just need to list a few
   console.log("Listening on:");
   console.log(`\thttp://localhost:${address.port}`);
   console.log(`\thttp://${hostname()}:${address.port}`);
