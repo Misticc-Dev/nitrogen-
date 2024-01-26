@@ -1,5 +1,7 @@
 const form = document.getElementById('adrbar');
 const input = document.querySelector('input');
+const address = document.getElementById("uv-address");
+const searchEngine = document.getElementById("uv-search-engine");
 
 const ts = new TabSystem({
   btnTemplate: $("#tabTemplate"),
@@ -63,3 +65,19 @@ $("#tabContainer").addEventListener(
 window.onload = function() {
   newTab();
 };
+
+form.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  try {
+    await registerSW();
+  } catch (err) {
+    error.textContent = "Failed to register service worker.";
+    errorCode.textContent = err.toString();
+    throw err;
+    console.log(err)
+  }
+
+  const url = search(address.value, searchEngine.value);
+  location.href = __uv$config.prefix + __uv$config.encodeUrl(url);
+});

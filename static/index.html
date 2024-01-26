@@ -24,7 +24,7 @@
         value="https://www.google.com/search?q=%s"
         type="hidden"
         />
-        <input type="text" placeholder="Starting Page" id="adrbar uv-address">
+        <input type="text" placeholder="Starting Page" id="adrbar">
       </form>
       <div class="icon refresh">
         <i class="fas fa-sync-alt"></i>
@@ -45,10 +45,11 @@
         <i class="fa-solid fa-x" id="closetab"></i>
       </div>
   </main>
-  <script src="/uv/uv.bundle.js"></script>
-  <script src="/uv/uv.config.js"></script>
-  <script src="script.js"></script>
+  <script src="/uv/uv.bundle.js" defer></script>
+  <script src="/uv/uv.config.js" defer></script>
+  <script src="script.js" defer></script>
   <script src="search.js" defer></script>
+  <script src="register-sw.js" defer></script>
 </body>
 
 </html>
