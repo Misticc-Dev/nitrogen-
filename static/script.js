@@ -1,6 +1,6 @@
-const form = document.getElementById('uv-form');
-const input = document.getElementById('adrbar');
-const address = document.getElementById("uv-address");
+const form = document.querySelector('form');
+const input = document.querySelector('input');
+const address = document.getElementById("adrbar");
 const searchEngine = document.getElementById("uv-search-engine");
 
 const ts = new TabSystem({
@@ -15,11 +15,11 @@ function $(query) {
   return document.querySelector(query)
 }
   
-const offset = "37px" // incompetent code
+const offset = "39px" // incompetent code
   
 function updateTabLengths() {
   console.log(ts.getTabCount())
-  if (ts.getTabCount() > 8) {
+  if (ts.getTabCount() > 16) {
     for (i = 0; i < ts.getTabCount(); i++) {
       ts.getTabs()[i].getConnectedElement().style.width = "calc(" + (100 / ts.getTabCount()).toString() + "%" + " - " + offset + " )"
     }
